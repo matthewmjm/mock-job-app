@@ -14,5 +14,6 @@ export default defineConfig({
   "server.hmr.overlay": false,
   test: {
     globals: true,
+    setupFiles: ["./tests/unit/setup.js"],
   },
 });
