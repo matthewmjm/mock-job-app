@@ -7,5 +7,6 @@ describe("MainNav", () => {
     render(MainNav);
     const companyName = screen.getByText("Faceplace Careers");
     expect(companyName).toBeInTheDocument();
+    screen.debug();
   });
 });

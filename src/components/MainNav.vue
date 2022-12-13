@@ -4,7 +4,28 @@
       <div
         class="mx-auto flex h-full flex-nowrap border-b border-solid border-brand-gray-1 px-8"
       >
-        <a h-ref="/" class="flex h-full items-center text-xl">{{ company }}</a>
+        <a :href="url" class="flex h-full items-center text-xl">{{
+          company
+        }}</a>
+        <nav class="ml-12 h-full">
+          <ul class="flex h-full list-none">
+            <li class="flex h-full">
+              <a href="" class="flex h-full items-center py-2.5">Teams</a>
+            </li>
+            <li class="ml-9 flex h-full">
+              <a href="" class="flex h-full items-center py-2.5">Locations</a>
+            </li>
+            <li class="ml-9 flex h-full">
+              <a href="" class="flex h-full items-center py-2.5">Benefits</a>
+            </li>
+            <li class="ml-9 flex h-full">
+              <a href="" class="flex h-full items-center py-2.5">Jobs</a>
+            </li>
+            <li class="ml-9 flex h-full">
+              <a href="" class="flex h-full items-center py-2.5">Students</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
   </header>
@@ -16,6 +37,7 @@ export default {
   data() {
     return {
       company: "Faceplace Careers",
+      url: "https://careers.google.com",
     };
   },
 };
