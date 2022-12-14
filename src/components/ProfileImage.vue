@@ -1,5 +1,9 @@
 <template>
-  <img :src="imageLink" class="h-8 w-8 rounded-3xl object-contain" />
+  <img
+    :src="imageLink"
+    class="h-8 w-8 rounded-3xl object-contain"
+    alt="User Profile Picture or Avatar"
+  />
 </template>
 
 <script>
