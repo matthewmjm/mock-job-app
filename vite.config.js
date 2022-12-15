@@ -11,9 +11,9 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
-  "server.hmr.overlay": false,
   test: {
     globals: true,
     setupFiles: ["./tests/unit/setup.js"],
   },
+  // "server.hmr.overlay": false,
 });
