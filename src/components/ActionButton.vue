@@ -21,9 +21,6 @@ export default {
       },
     },
   },
-  data() {
-    return {};
-  },
   computed: {
     buttonClass() {
       return {
