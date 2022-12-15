@@ -26,7 +26,7 @@
             v-else
             @click="loginUser"
             :text="buttonText"
-            :is-primary="false"
+            type="primary"
           />
         </div>
       </div>
@@ -56,7 +56,7 @@ export default {
         "Jobs",
       ],
       isLoggedIn: false,
-      buttonText: "Log in",
+      buttonText: "Sign in",
     };
   },
   methods: {
