@@ -13,7 +13,7 @@ export default defineConfig({
   },
   test: {
     globals: true,
-    setupFiles: ["./tests/unit/setup.js"],
+    setupFiles: ["./tests/setup.js"],
   },
   // "server.hmr.overlay": false,
 });

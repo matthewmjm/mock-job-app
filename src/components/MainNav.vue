@@ -24,7 +24,7 @@
 
         <div class="ml-auto flex h-full items-center">
           <profile-image v-if="isLoggedIn" />
-          <action-button v-else text="Sign in" @click="loginUser" />
+          <action-button v-else :text="buttonText" @click="loginUser" />
         </div>
       </div>
 
@@ -58,6 +58,7 @@ export default {
         "Jobs",
       ],
       isLoggedIn: false,
+      buttonText: "Sign in",
     };
   },
   methods: {

@@ -1,19 +1,8 @@
 import { render, screen } from "@testing-library/vue";
 import userEvent from "@testing-library/user-event";
-
 import MainNav from "@/components/MainNav.vue";
 
 describe("MainNav", () => {
-  const renderMainNav = () => {
-    render(MainNav, {
-      global: {
-        stubs: {
-          FontAwesomeIcon: true,
-        },
-      },
-    });
-  };
-
   it("displays company name", () => {
     render(MainNav);
     const companyName = screen.getByText("Faceplace Careers");
@@ -52,7 +41,7 @@ describe("MainNav", () => {
       await userEvent.click(loginButton);
 
       profileImage = screen.getByRole("img", {
-        name: /user profile image/i,
+        name: /user profile picture or avatar/i,
       });
       expect(profileImage).toBeInTheDocument();
     });
