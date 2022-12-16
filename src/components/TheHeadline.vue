@@ -5,7 +5,7 @@
       <br />
       for Everyone
     </h1>
-    <h2>Find Your Next Job at The Faceplace</h2>
+    <h2 class="text-3xl font-light">Find Your Next Job at The Faceplace</h2>
   </section>
 </template>
 
