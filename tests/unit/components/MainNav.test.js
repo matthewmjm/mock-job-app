@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event";
 import MainNav from "@/components/MainNav.vue";
 
 describe("MainNav", () => {
-  it("displays company name", () => {
+  const renderMainNav = () => {
     render(MainNav, {
       global: {
         stubs: {
@@ -11,6 +11,10 @@ describe("MainNav", () => {
         },
       },
     });
+  };
+
+  it("displays company name", () => {
+    renderMainNav();
     const companyName = screen.getByText("Faceplace Careers");
     expect(companyName).toBeInTheDocument();
     screen.debug();
@@ -40,13 +44,7 @@ describe("MainNav", () => {
 
   describe("when the user logs in", () => {
     it("displays user profile picture", async () => {
-      render(MainNav, {
-        global: {
-          stubs: {
-            FontAwesomeIcon: true,
-          },
-        },
-      });
+      renderMainNav();
 
       let profileImage = screen.queryByRole("img", {
         name: /user profile picture or avatar/i,
